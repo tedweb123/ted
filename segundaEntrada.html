@@ -1,0 +1,138 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+     
+<!--INICIO link de animacion de saltar aparecer etc   -->  
+   
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+ <!--FIN link de animacion de saltar aparecer etc   -->   
+    
+    <link href="css/segundaEntrada.css" rel="stylesheet" type="text/css">
+     <!--<link href="css/normalize.css" rel="stylesheet" type="text/css">-->
+    
+    <script type="text/javascript">
+     
+        
+function reproducesonido(id_del_sonido,volumen=1){
+	var sonido=document.getElementById(id_del_sonido);
+	sonido.volume=volumen;
+	sonido.play();
+}
+        
+    function atras(){
+        
+	
+	reproducesonido('sonidomensaje',1)
+}
+  
+        function atras1(){
+        
+	
+	reproducesonido('sonidomensaje',1)
+}
+    
+    </script>
+  <!-- libreria para la musica hover escudo script 1.5.2-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js">
+    
+    </script>    
+    
+   <!-- librerias js par ala imagen transicion-->
+    
+    
+   
+</head>
+
+<body>
+    
+    <div id="fotosAnimado">
+    
+<div id="titok" class="animated backInDown" >
+  
+       <blockquote class="tiktok-embed animate__animated animate__bounce animate__repeat-2" cite="https://www.tiktok.com/@eduardoaguilar273/video/7103235005861661958" data-video-id="7103235005861661958" style="max-width: 800px;min-width: 585px;" > <section>  <a target="_blank" title="♬ Resistiré - Duo Dinamico" href="https://www.tiktok.com/music/Resistiré-226908346291785728">♬ Resistiré - Duo Dinamico</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>       
+            
+    
+ </div> 
+    
+<div id="escudo">
+
+<div id="uno" class="animate__animated animate__backInDown musicaEscudo" > <!--/*1000  585*/-->
+ <img  src="img/garriba.png" width="472" height="92" alt=""/>    
+</div>    
+
+    
+<div id="dos" class="animate__animated animate__zoomIn animate__delay-3s musicaEscudo"> 
+<img  src="img/primero.png" width="442" height="161" alt=""/> 
+</div>    
+ 
+<div id="escudoImagen" class="animate__animated animate__fadeInTopRight animate__delay-4s musicaEscudo" > 
+    <img src="img/escudo.png" width="294" height="301" alt=""/>
+    
+</div>
+    
+<div id="tres" class="animate__animated animate__backInUp musicaEscudo" >
+ <img  src="img/gabajo.png" width="469" height="80" alt=""/>  
+</div>
+    
+ <div id="jugar" onclick="jugar();"><a id="jugar1" class="botonSonido" href="juego.html">IR AL JUEGO</a> </div>  
+    
+    <div  id="atras" class="botonSonido" onclick="atras();"><a id="atras1" onclick="atras1();" href="index.html">REGRESAR ATRAS</a> </div> 
+<!--audio music al pasar hover sobre todo el escudo -->   
+<audio id="beep" preload="auto">
+   <source src="sonidos/himnoperu.mp3"></source>
+			
+</audio>   
+   
+        
+<audio id="btnMusica" preload="auto">
+   <source src="http://ivang-design.com/svg-load/menu/hover.mp3"></source>
+			
+</audio>           
+    
+</div>  
+</div>
+    
+    
+      <!-- script audio hovere escudo-->
+     <script>
+		
+		var beepOne = $("#beep")[0];
+		$(".musicaEscudo")
+	.mouseenter(function() {
+		beepOne.play();
+	});
+	
+	</script>
+
+ <script>
+		
+		var botonesMusica = $("#btnMusica")[0];
+		$(".botonSonido")
+	.mouseenter(function() {
+		botonesMusica.play();
+	});
+	
+	</script>
+
+
+    
+    <aside style="display:none">
+		
+		<audio preload="auto" id="sonidomensaje">
+			 <source src="sonidos/desplazar1.mp3" type="audio/wav">
+		</audio>
+		
+	</aside>
+   
+<script src='js/three.min.js'></script>
+    <script src='js/TweenMax.min.js'></script>
+    <script src='js/bas.js'></script>
+    <script src='js/OrbitControls-2.js'></script>
+    
+
+</body>
+</html>

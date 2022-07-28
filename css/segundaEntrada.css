@@ -1,0 +1,300 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    
+}
+     :root {
+  
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s;
+}
+        div {
+  position: absolute;
+}
+body {
+  background-color: black;
+    border: 2px solid green;
+  /*// // overflow-y:hidden;
+////   overflow-x: hidden;*/
+    
+}
+    
+/*ANIMACION DE LIBRERIA ANIMATE.CSS  VOLANDO DE ARRIBA  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'> */
+
+        @keyframes backInDown {
+  0% {
+    transform: translateY(-1200px) scale(.7);
+    opacity: .7;
+  }
+
+  80% {
+    transform: translateY(0px) scale(.7);
+    opacity: .7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInDown {
+ 
+  animation: backInDown 2s;
+ 
+  animation-timing-function: ease-in;
+}
+/*FIN ANIMACION  */
+        
+    button {
+  display: inline-block;
+  position: relative;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: .5em;
+  margin: .5em;
+  font-size: 2em;
+  font-weight: bold;
+  transition: all .5s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    
+}
+button:hover{
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, .75);
+     border-radius: 15px;
+}
+button::before{
+   
+  transition: all .5s;
+}
+
+
+
+#fotosAnimado{
+    display: flex;
+    justify-content: space-between;
+    xxmargin-left: 5em;
+    
+}
+
+#titok{
+    display: flex;
+    justify-content: flex-start; 
+   margin-left: 3em;
+    height: 97vh;
+     border: 1px solid red;
+}
+.tiktok-embed{
+    text-align: center;
+    background-color: black;
+     border: 1px solid green;
+    width: 50%;
+}
+blockquote{
+   
+    height: 88vh;
+}
+#escudo{
+   /* border: 2px solid blue;*/
+    display: flex;
+   
+    flex-direction: column;
+    justify-content: space-around;
+    width: 600px;
+    top: 0px;
+    left: 650px;
+    
+    
+}
+
+
+
+#uno{
+   display: flex;
+    
+   top:80px;
+   left: 15px; 
+    
+    /*REGLA DE ANIMACION ANIMATE.CSS https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css*/
+   margin: 0 0.5rem;
+
+  animation: backInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s; /* don't forget to set a duration! */ 
+}
+
+        
+  
+        
+#dos{
+    
+   display: flex;
+    
+   top:122px;
+   left: 22px; 
+    height: 500px;
+   
+    
+}
+#dos img{
+    height: 400px;
+}
+.musicaEscudo:hover{
+    animation: bounce;
+    animation-duration:3s;
+}
+
+#escudoImagen{
+    top:220px;
+    left: 106px; 
+}
+#tres{
+    display: flex;
+    top:500px;
+    left: 25px; 
+    transform: rotate(-1deg);
+   /*REGLA DE ANIMACION ANIMATE.CSS https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css*/
+   
+
+  animation: backInUp; 
+  animation-duration: 4s; 
+    
+}
+#jugar{
+    
+  display: inline-block;
+  /*xposition: relative;*/
+  top:5px;
+    
+  border-radius: 3px;
+  text-decoration: none;
+  padding: .3em;
+  margin: .3em;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all .5s;
+ 
+   border: 2px solid white;
+    text-align: center;
+    width: 15em;
+    color: white;
+}
+#jugar a{
+    text-decoration: none;
+    color: white;
+}
+
+#jugar:hover{
+    
+   
+     border-radius: 15px;
+     background:lawngreen;   
+    color:black;
+}
+#jugar::before{
+  
+  transition: all .5s;
+}
+#jugar1{
+     display: flex;
+   
+    padding: .3em;
+    width: 14em;
+    justify-content: center;
+}
+
+#atras{
+   display: inline-block;
+
+    top:5px;
+    left: 270px;
+  border-radius: 3px;
+  text-decoration: none;
+  padding: .3em;
+  margin: .3em;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all .5s;
+  
+   border: 2px solid white;
+    text-align: center;
+    width: 15em;
+    color: white; 
+}
+#atras1{
+    
+   display: flex;
+   
+    padding: .3em;
+    width: 14em;
+    justify-content: center;
+  
+    
+}
+#atras:hover{
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, .75);
+     border-radius: 15px;
+    background:lawngreen;   
+    color:black;
+}
+#atras a{
+    text-decoration: none;
+    color: white;
+}
+
+#atras::before{
+   
+  transition: all .5s;
+}
+@media(max-width:1210px){
+   /* *{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    
+}*/
+    /*div {
+  position: absolute;
+    }
+    html{
+        position: relative;
+       border:2px solid yellow;
+        height: 400px;
+    }
+    
+   
+    
+#titok{
+    display: none;
+    
+    justify-content: flex-start; 
+    margin-left: -1em;
+    width: 60px;
+    height: 85vh;
+     border: 2px solid red;
+}
+    blockquote{
+         display: none;
+   max-width: 200px;
+        width: 200px;
+    min-width: 200px;    
+    height: 88vh;
+}
+    
+  
+        
+
+.musicaEscudo:hover{
+    animation: bounce;
+    animation-duration:3s;
+}
+*/
+
+    
+}
+

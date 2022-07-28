@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documento sin título</title>
+
+   <!--reglas CSS de entrada html    -->
+     <link href="css/index.css" rel="stylesheet" type="text/css">
+   <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.0/css/all.css'>
+    <style type="text/css">
+    .containerFila{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 20%;
+        
+        cursor: pointer;
+        z-index: 1000014;
+}
+
+.containerReproductorAudio{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 130px;
+  border: solid 2px white;
+  border-radius: 3px;
+
+}
+        .containerReproductorAudio:hover{
+            border-radius: 15px;
+ background:lawngreen; 
+             color:black;
+        }
+
+.botones{
+   font-family: Arial;
+   font-size: 30px;
+   color: white;
+   margin-top:1px;
+    z-index: 1000018;
+}
+       
+          
+.botones:hover{
+            color:black;
+        }
+        
+.tiempo{
+    position: absolute;
+     right: 40px;
+   
+   
+  font-family: Arial;
+  font-size: 8px;
+  color: white;
+  margin-top:-12px;
+}
+
+.seek-bar{
+    width: 50px;
+    height: 5px;
+    background-color:gray;
+    display: flex;
+    border-radius: 50px;
+    margin-top:18px;
+    cursor: pointer;
+}
+.fill{
+    height: 3px;
+    background-color:white;
+    border-radius: 20px;
+}
+.handle{
+    width: 5px;
+    height: 5px;
+    background-color:white;;
+    border-radius: 50%;
+    margin-left: -5px;
+    margin-top:-1.5px;
+    transform: scale(2);
+}
+    </style>
+    
+<!--libreria de animacion.css-->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">    
+    
+
+ 
+    
+  <!--  scripts-->
+
+<script type="text/javascript" src="js/comunes.js" ></script>  
+    
+    
+    <!-- libreria para la musica hover escudo script 1.5.2-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>    
+
+</head>
+
+<body>
+
+ 
+<div id="Div_Contenedor_Principal">
+    
+<div id="botones">
+  <button  id="refrescar" class="botonSonido" onclick="refrescarPagina();">Refrescar página</button>
+    
+   <button id="sgte" class="botonSonido" onclick="sgte();"><a  href="segundaEntrada.html">Avanzar página</a></button>
+    
+   <!-- <button id="musicaFondo" class="contact100-form-btn botonSonido" onmousedown="sonido.play()">Cancion</button>-->
+    <div class="containerFila botonSonido">
+  <div class="containerReproductorAudio">
+           
+     <div class="botones">
+        <i id="botonReproductor" class="far fa-play-circle" ></i>
+    </div>
+    
+    <div id="tiempo" class="tiempo">01:15 / 02:53</div>
+    
+    <audio id="music">
+      <source src="sonidos/genkidama.mp3">
+	 </audio>
+    
+    <div class="audio" id="audio" name="audio" data-value="sonidos/genkidama.mp3">
+        
+    </div>
+       
+    <div id="timeline" class="seek-bar">
+        <div id="fill" class="fill"></div>
+        <div id="handle" class="handle"></div>
+    </div> 
+    
+  </div>
+</div>
+    
+    
+    <audio id="btnMusica" preload="auto">
+   <source src="sonidos/hover.mp3"></source>
+			</audio>  
+</div>
+    
+    
+<div id="avion">
+<marquee class="sonidoavion" direction="right" scrollamount="65"><img  src="img/avioncito.png" alt=""/></marquee>
+    
+    <audio id="beepavion" autoplay loop>
+				<source src="sonidos/avion.mp3"></source>
+   </audio>
+</div>    
+
+ <img id="Imagen_Poblacion" src="img/gente.png"  alt=""/>    
+    
+<div id="contenido_Animado">
+    
+ 
+
+   <div id="paracaidas"><img src="img/parac.png"   alt=""/></div> 
+    
+  <img id="soldado" class="animated backInDown sonidosoldado habla" src="img/soldadito.png"   alt=""/>
+ 	<audio id="beep" preload="auto" autoplay>
+				<source src="sonidos/salto.mp3"></source>
+   </audio>
+    
+    
+     
+    <audio id="hablasoldado" preload="auto">
+   <source src="sonidos/saludos.mp3"></source>
+			</audio>  
+
+   
+</div>
+
+</div>
+    
+    
+<script>
+	
+		var botonesMusica = $("#btnMusica")[0];
+		$(".botonSonido")
+	.mouseenter(function() {
+		botonesMusica.play();
+	});
+
+    var botonesMusicahabla = $("#hablasoldado")[0];
+		$(".habla")
+	.mouseenter(function() {
+		botonesMusicahabla.play();
+	});
+    
+	</script>   
+   
+   <script >
+var sonido = new Audio();
+sonido.src="sonidos/genkidama.mp3";
+
+</script>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script> 
+ <script>
+    var boton = document.getElementById('botonReproductor'); // play button
+var music = document.getElementById('music'); // id for audio element
+var tiempo = document.getElementById('tiempo'); // 
+var duration = music.duration; // Duration of audio clip, calculated here for embedding purposes
+
+
+
+// play button event listenter
+boton.addEventListener("click", play);
+
+
+var fillBar = document.getElementById("fill");
+var bool = false;
+
+
+var srcAudio = document.getElementById('audio').getAttribute('data-value');
+
+console.log('Audio: '+srcAudio);
+
+
+
+// makes timeline clickable
+timeline.addEventListener("click", function(event) {
+    //moveplayhead(event);
+    music.currentTime = duration * clickPercent(event);
+}, false);
+
+// returns click as decimal (.77) of the total timelineWidth
+function clickPercent(event) {
+    return (event.clientX - getPosition(timeline)) / timelineWidth;
+}
+
+function getPosition(el) {
+    return el.getBoundingClientRect().left;
+}
+
+//Play and Pause
+function play() 
+{
+    // start music
+    if (music.paused) {
+        music.play();
+        // remove play, add pause
+        boton.setAttribute('class','far fa-pause-circle');
+        console.log('Reproduciendo música');
+    } else { // pause music
+        music.pause();
+        // remove pause, add play
+        boton.setAttribute('class','far fa-play-circle');
+        console.log('Música parada');
+    }
+}
+
+
+
+ 
+
+  
+music.addEventListener("timeupdate", timeUpdate, false);
+
+    function reskinTime(secs, format) 
+    {
+            var hr = Math.floor(secs / 3600);
+            var min = Math.floor((secs - (hr * 3600)) / 60);
+            var sec = Math.floor(secs - (hr * 3600) - (min * 60));
+            if (sec < 10) {
+                    sec = "0" + sec;
+            }
+            console.log(min + ':' + sec);
+            return min + ':' + sec;
+    }
+
+    function timeUpdate() 
+    {
+            var position = music.currentTime / music.duration;
+            fillBar.style.width = position * 100 +'%';
+            tiempo.innerHTML = ' '+reskinTime(music.currentTime.toString())+' / '+ reskinTime(music.duration.toString());
+    }
+    </script>   
+     
+
+</body>
+</html>

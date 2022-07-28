@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+    <style type="text/css">
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            padding: 0px;
+	border: 0px;
+        }
+        
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+   
+   
+    min-height: 100vh; 
+    
+   
+}
+        div{
+            margin:1em;
+            background-color: aqua;
+            width: 90%;
+            height: 90%;
+            
+        }
+        
+    @media(max-width:425px){
+        html{
+            transform: rotate(90deg);
+        }
+            body{
+               position: relative;
+       transform: rotate(90deg);
+       
+        
+            }
+        div{
+            transform: rotate(90deg);
+            width: 20vw;
+            height: 90vh;
+            
+        }
+        p{
+            
+            transform: rotate(90deg);
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+   <p>uno mas uno</p> 
+    </div>
+    
+</body>
+</html>
